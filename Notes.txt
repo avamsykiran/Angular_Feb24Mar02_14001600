@@ -1,2 +1,164 @@
 https://github.com/avamsykiran/Angular_Feb24Mar02_14001600.git
 
+Angular -  SPA Javascript Framework
+----------------------------------------
+
+        Single Page Application
+
+        Environemnt
+        ------------------
+        NodeJs                      development platform
+        NPM (node package manager)  dependency management tool    
+        TypeScript                  scripting language
+        Angular CLI                 development tool
+        VS Code                     ide
+
+
+        Angular CLI
+        ----------------------------------------------
+
+                managing the buiding blocks
+                        of an angualr application
+
+        node --version
+        npm --version
+        ng --version
+
+        npm install -g @angular/cli
+        
+        npm install package-name --save
+        npm install package-name --save-dev
+
+        ng new angular-project-name
+
+        cd angular-project-name
+
+        ..\angular-project-name> npm install bootstrap --save
+        ..\angular-project-name> ng build                   build our angualr app
+        ..\angular-project-name> ng build --prod            build our angualr app production ready
+        ..\angular-project-name> ng serve --port 5656 -o    starts the dev server and launches chrome.
+
+        ..\angular-project-name> ng g module ModuleName
+        ..\angular-project-name> ng g component ComponentName
+        ..\angular-project-name> ng g directive DirectiveName
+        ..\angular-project-name> ng g pipe PipeName
+        ..\angular-project-name> ng g service ServiceName
+        ..\angular-project-name> ng g guard GuardName
+        ..\angular-project-name> ng g class ClassName
+        ..\angular-project-name> ng g interface InterfaceName
+
+        TypeScript
+        ---------------------------------------------
+
+                = Javascript + types
+
+                varibleName : type = value;
+
+                let n : number = 10;
+
+                        any
+                        string 
+                        number
+                        boolean                        
+                        void
+
+                        class
+                        interface
+                        enum
+                        array
+
+
+        Angular Archetecure (buiding blocks )
+        -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+            Module
+
+                        is a logical group of components, directives, pipes and services and
+                        other modules
+
+                        Root Module
+                                is the main module inside which the whole project
+                                resides.
+
+                        Feature Module
+                                the sub-modules that are contained by 
+                                a root module is called a feature module.
+
+                        @NgModule({
+                            declaration:[
+                                list of components,directives and pipes
+                            ],
+                            imports:[
+                                list of feature-modules
+                            ],
+                            providers:[
+                                list of services
+                            ],
+                            bootstrap:[
+                                list of components that are to be created after the module loads.
+                            ]
+                        })    
+                        export class MyModule {
+
+                        }
+
+            Directive
+
+                Component Directives   ===> Components
+
+                        @Component({
+                            selector:'my-component',
+                            template:'<p>{{welcomeMsg}}</p>'
+                        })    
+                        export class MyComponent {
+
+                            welcomeMsg : string;
+
+                            constructor(){
+                                this.welcomeMsg="Hello Welcoem All";
+                            }
+
+                        }
+
+                        <html>
+                            <head>
+                            </head>
+                            <body>
+                                <my-component></my-component>
+                            </body>
+                        </html>
+
+                        <html>
+                            <head>
+                            </head>
+                            <body>
+                                <p>Hello Welcoem All</p>
+                            </body>
+                        </html>
+
+                Attribute Directives   ===> Directives
+
+                        @Directive({
+
+                        })    
+                        export class MyDirective {
+
+                        }
+
+              
+            Pipe
+                        @Pipe({
+
+                        })    
+                        export class MyPipe {
+
+                        }
+            Service
+                        @Injectable({
+
+                        })    
+                        export class MySerive {
+
+                        }
+
+        
