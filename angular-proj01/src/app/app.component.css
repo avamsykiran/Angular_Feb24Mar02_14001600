@@ -1,0 +1,17 @@
+div{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.bordered{
+    border: 15px solid black;
+}
+
+.centered{
+    display: block;
+    margin: auto;
+}
+
+.rounded{
+    border-radius: 15px;
+}

@@ -1,0 +1,45 @@
+<section>
+
+    <form>
+        <div>
+            <label>Operand1: </label>
+            <input type="text" name="o1" [(ngModel)]="n1" />
+        </div>
+        <div>
+            <label>Operand2: </label>
+            <input type="text" name="o2" [(ngModel)]="n2" />
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" name="c1" [(ngModel)]="showSum" />Sum
+            </label>
+            <label>
+                <input type="checkbox" name="c2" [(ngModel)]="showDif" />Difference
+            </label>
+            <label>
+                <input type="checkbox" name="c3" [(ngModel)]="showProd" />Product
+            </label>
+            <label>
+                <input type="checkbox" name="c4" [(ngModel)]="showQut" />Quitiont
+            </label>
+            <label>
+                <input type="checkbox" name="c5" [(ngModel)]="showRem" />Reminder
+            </label>
+        </div>
+    </form>
+
+    <div>
+        <p *ngIf="showSum"><strong>Sum is {{n1+n2}}</strong></p>
+        <p *ngIf="showDif"><strong>Dif is {{n1-n2}}</strong></p>
+        <p *ngIf="showProd"><strong>Prod is {{n1*n2}}</strong></p>
+        <p *ngIf="showQut"><strong>Qut is {{n1/n2}}</strong></p>
+        <p *ngIf="showRem"><strong>Rem is {{n1%n2}}</strong></p>        
+    </div>
+
+    <div>
+        <h3>Friends</h3>
+        <ol>
+            <li *ngFor="let f of friends"> {{f}} </li>
+        </ol>
+    </div>
+</section>

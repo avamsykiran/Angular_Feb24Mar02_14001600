@@ -1,0 +1,30 @@
+<h1>{{title}}</h1>
+<div>
+    <img [src]="logo" (dblclick)="toggleImage()"
+        [class]="{bordered:isBordered,centered:isCentered,rounded:isRounded}" />
+</div>
+<div>
+    <form>
+        <div>
+            <input type="text" name="tb1" [(ngModel)]="title" />
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" name="c1" [(ngModel)]="isBordered" />
+                Apply Borders
+            </label>
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" name="c2" [(ngModel)]="isRounded" />
+                Apply Round Corners
+            </label>
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" name="c3" [(ngModel)]="isCentered" />
+                Align Center
+            </label>
+        </div>
+    </form>
+</div>
