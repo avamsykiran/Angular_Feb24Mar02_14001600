@@ -1,0 +1,31 @@
+<section class="container-fluid p-4 bg-light">
+
+    <div class="col-sm-5 mx-auto">
+        <form (ngSubmit)="formSubmited()" class="form" #f="ngForm">
+            <div class="form-group">
+                <label class="form-label">User Name</label>
+                <input type="text" class="form-control" #unm="ngModel"
+                name="u" [(ngModel)]="user.userName" required minlength="3" maxlength="15"/>
+                <div *ngIf="unm.invalid && (unm.touched || unm.dirty)">
+                    <span *ngIf="unm.errors.required">This field is manditory</span>
+                    <span *ngIf="unm.errors.minlength">Minimum of 3 chars expected</span>
+                    <span *ngIf="unm.errors.maxlength">Maximum of 15 chars allowed</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control" #pwd="ngModel"
+                name="p" [(ngModel)]="user.password" required minlength="8"/>
+                <div *ngIf="pwd.invalid && (pwd.touched || pwd.dirty)">
+                    <span *ngIf="unm.errors.required">This field is manditory</span>
+                    <span *ngIf="unm.errors.minlength">Minimum of 8 chars expected</span>                    
+                </div>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary btn-block" [disabled]="f.invalid">
+                    Login
+                </button>
+            </div>
+        </form>
+    </div>
+</section>

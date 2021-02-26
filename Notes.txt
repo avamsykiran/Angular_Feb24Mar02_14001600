@@ -262,4 +262,49 @@ Angular -  SPA Javascript Framework
             *ngSwitchCase
             *ngDefault
 
-        
+    Pipes
+    -------------------------------------
+
+        number
+        currency
+        date
+        json
+        async
+        lowercase
+        uppercase
+
+    Angular Forms 
+    -----------------------------------
+
+        Template Driven Forms       
+
+                FormsModule
+                        ngForm
+                        ngModel
+
+            are good for small forms
+            more on tempalte and less on controller
+            difficult to test
+
+        Model Driven Forms  / Reactive Forms
+
+            are good for complex forms
+            more on controller and less on template
+            easy to test
+
+                ReactiveFormsModule
+
+                        FormGroup
+                        FormControl
+
+    Service
+    -----------------------------------
+        is an injectable object that provides                       
+        bussiness logic. 
+
+    Angular Component Life Cycle
+
+    Routing
+
+
+

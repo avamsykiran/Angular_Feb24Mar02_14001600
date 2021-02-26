@@ -1,0 +1,50 @@
+<section class="container-fluid p-4 bg-primary">
+    
+    <div>
+        <h3>String Pipes</h3>
+        <p>
+            original : <strong>{{str}}</strong> <br />
+            lowercase: <strong>{{str|lowercase}}</strong><br />
+            uppercase: <strong>{{str|uppercase}}</strong>
+        </p>
+    </div>    
+
+    <div>
+        <h3>Number Pipe</h3>
+        <p>
+            original : <strong>{{num}}</strong> <br />
+            <strong>{{num|number:'5.2-5'}}</strong><br />
+            <strong>{{num|number:'2.0-0'}}</strong>
+        </p>
+    </div>    
+
+    <div>
+        <h3>Currency Pipe</h3>
+        <p>
+            original : <strong>{{num}}</strong> <br />
+            <strong>{{num|currency:'INR'}}</strong><br />
+            <strong>{{num|currency:'USD'}}</strong><br />
+            <strong>{{num|currency:'GBP'}}</strong><br />            
+            <strong>{{num|currency:'ABC'}}</strong>
+        </p>
+    </div>    
+    <div>
+        <h3>Date Pipe</h3>
+        <p>
+            original : <strong>{{today}}</strong> <br />
+            <strong>{{today|date:'short'}}</strong><br />
+            <strong>{{today|date:'long'}}</strong><br />
+            <strong>{{today|date:'dd-MM-yyyy'}}</strong><br />
+            <strong>{{today|date:'dd-MMM-yyyy'}}</strong><br />
+            <strong>{{today|date:'dd-MMMM-yyyy'}}</strong><br />
+            <strong>{{today|date:'hh:mm:ss aa'}}</strong><br />
+            <strong>{{today|date:'HH:mm:ss '}}</strong><br />
+            <strong>{{today|date:'dd-MM-yyyy HH:mm:ss'}}</strong>
+        </p>
+    </div>    
+    <div>
+        <h3>Custome Pipe</h3>
+        original : <strong>{{str}}</strong> <br />
+        <strong>{{str|fixedlength:10}}</strong> 
+    </div>
+</section>
