@@ -1,0 +1,29 @@
+<section class="container-fluid p-4 bg-light">
+
+    <div class="col-sm-5 mx-auto">
+        <form (ngSubmit)="formSubmited()" class="form" [formGroup]="loginForm">
+            <div class="form-group">
+                <label class="form-label">User Name</label>
+                <input type="text" class="form-control" formControlName="userName"/>
+                <div *ngIf="unmFC.invalid && (unmFC.touched || unmFC.dirty)">
+                    <span *ngIf="unmFC.errors.required">This field is manditory</span>
+                    <span *ngIf="unmFC.errors.minlength">Minimum of 3 chars expected</span>
+                    <span *ngIf="unmFC.errors.maxlength">Maximum of 15 chars allowed</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control" formControlName="password"/>
+                <div *ngIf="pwdFC.invalid && (pwdFC.touched || pwdFC.dirty)">
+                    <span *ngIf="pwdFC.errors.required">This field is manditory</span>
+                    <span *ngIf="pwdFC.errors.minlength">Minimum of 8 chars expected</span>                    
+                </div>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary btn-block" [disabled]="loginForm.invalid">
+                    Login
+                </button>
+            </div>
+        </form>
+    </div>
+</section>

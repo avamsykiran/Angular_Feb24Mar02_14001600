@@ -1,0 +1,18 @@
+<section class="container-fluid p-4">
+
+    <form class="form-inline p-4" (ngSubmit)="formSubmited()">
+        <label class="form-label">Lower Bound</label>
+        <input type="number" name="lb" [(ngModel)]="lb" class="form-control mr-4"/>
+        <label class="form-label">Upper Bound</label>
+        <input type="number" name="ub" [(ngModel)]="ub" class="form-control mr-4"/>
+        <button class="btn btn-sm btn-primary" [disabled]="inProgress">
+            Generate
+        </button>
+    </form>
+    
+    <p *ngIf="err"><strong>{{err}}</strong></p>    
+    
+    <div class="border p-4" *ngIf="results">
+        <span *ngFor="let n of results">{{n}}, </span>
+    </div>    
+</section>

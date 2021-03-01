@@ -302,7 +302,79 @@ Angular -  SPA Javascript Framework
         is an injectable object that provides                       
         bussiness logic. 
 
+
+    Routing
+    -----------------------------------
+
+        RouterModule
+
+        Routes  = an array of Route
+            
+            Route
+                    path:''
+                    compoennt:
+
+        Router      navigate programatically.
+           
+        ActivateRoute 
+                    always gives the current detials of the route.
+
+                        current route path
+                        params
+                        queryParams
+
+        routeLink   use on 'a' elements to hold the path
+
+        router-outlet   used for holding space
+                            where the targetted component must appear.
+
+
+    RxJS
+    -----------------------------------------------
+
+        setTimeout
+        setInterval
+
+        Observable  uses call back machanisim
+        to communicate witht eh foreground task.
+
+        let job = (observer) => {
+            .................
+             observer.next(val);  //emits a value
+            .....................
+             observer.error(err); //emit an err
+            ...............
+              observer.complete();  
+        }
+
+        let ob = new Observable(job);
+
+        ob.subscribe(
+            (data) => {}, //called in reposne to a value
+            (err) => {}. //called in reponse to the error
+            () => {} //called in response when the job completes.
+        );
+
     Angular Component Life Cycle
+    -----------------------------------
+
+         LifeCycle                       Hooks
+
+    At the time of loading:         ngOnChanges
+                                    ngOnInit
+                                    ngDoCheck
+
+     compoennt data binding         ngOnChanges    
+     might change                   ngDoCheck
+                                    
+
+     Content Initialization         ngAfterContnetInit    
+                                    ngAfterContnetChecked    
+
+     Child View Initialization      ngAfterViewInit
+                                    ngAfterViewChecked
+
+     Destroy                        ngOnDestroy    
 
     Routing
 

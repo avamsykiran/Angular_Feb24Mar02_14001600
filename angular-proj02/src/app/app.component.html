@@ -1,3 +1,22 @@
 <app-header></app-header>
-<app-pipes-demo></app-pipes-demo>
-<app-login-form></app-login-form>
+<nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+
+    <a href="#" class="navbar-brand">Angular App</a>
+
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" routerLink="">Pipes Demo</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="login">Login Form</a>
+        </li>  
+        <li class="nav-item">
+            <a class="nav-link" routerLink="login2">Login ReactiveForm</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="series">Number Series</a>
+        </li>
+    </ul>    
+
+</nav>
+<router-outlet></router-outlet>
