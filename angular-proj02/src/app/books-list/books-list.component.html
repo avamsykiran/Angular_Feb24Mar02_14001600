@@ -1,0 +1,26 @@
+<section class="container-fluid p-4">
+    <h3>Books List</h3>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Book#</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>            
+        </thead>
+        <tbody>
+            <tr *ngFor="let b of books">
+                <td>{{b.id}}</td>
+                <td>{{b.title|uppercase}}</td>    
+                <td>{{b.price|currency:'INR'}}</td>
+                <td>
+                    <button class="btn btn-sm btn-danger" (click)="deleteBook(b.id)">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
